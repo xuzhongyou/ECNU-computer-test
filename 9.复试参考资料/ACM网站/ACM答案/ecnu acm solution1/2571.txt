@@ -1,0 +1,50 @@
+#include <iostream>
+using namespace std;
+ 
+int GCD(int a,int b)
+{
+	int max,min,i;
+	if(a>b)
+	{
+		max=a;
+		min=b;
+	}
+	else 
+	{
+		max=b;
+		min=a;
+	}
+	for(i=min;i>0;i--)
+		if(max%i==0&&min%i==0)
+			return i;
+}
+ 
+int LCM(int a,int b)
+{
+	int max,min,i;
+	if(a>b)
+	{
+		max=a;
+		min=b;
+	}
+	else 
+	{
+		max=b;
+		min=a;
+	}
+	for(i=max;i<=a*b;i+=max)
+		if(i%max==0&&i%min==0)
+			return i;
+}
+ 
+int main(int argc, char* argv[])
+{
+	int n,a,b,i;
+	cin>>n;
+	for(i=0;i<n;i++)
+	{
+		cin>>a>>b;
+		cout<<GCD(a,b)<<" "<<LCM(a,b)<<endl;
+	}	
+	return 0;
+}

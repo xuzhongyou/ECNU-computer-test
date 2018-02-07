@@ -1,0 +1,38 @@
+#include "iostream"
+#include "string.h"
+#include "cmath"
+using namespace std;
+ 
+ 
+int main(int argc, char* argv[])
+{
+	int n,i,j;
+	float m;
+	char c[33];
+	cin>>n;
+	gets(c);
+	for(i=1;i<=n;i++)
+	{
+		gets(c);
+		m=0;
+		for(j=0;j<8;j++)
+			if(c[j]=='1')
+				m+=pow(2.0,7-j);
+		cout<<m<<".";
+		m=0;
+		for(j=8;j<16;j++)
+			if(c[j]=='1')
+				m+=pow(2.0,15-j);
+		cout<<m<<".";
+		m=0;
+		for(j=16;j<24;j++)
+			if(c[j]=='1')
+				m+=pow(2.0,23-j);
+		cout<<m<<".";
+		m=0;
+		for(j=24;j<32;j++)
+			if(c[j]=='1')
+				m+=pow(2.0,31-j);
+		cout<<m<<endl;
+	}
+}

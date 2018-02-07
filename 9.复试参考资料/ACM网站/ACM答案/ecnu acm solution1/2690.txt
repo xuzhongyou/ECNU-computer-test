@@ -1,0 +1,19 @@
+#include "iostream"
+using namespace std;
+ 
+int main()
+{
+	int e,f,c,k,n;
+	while(cin>>e>>f>>c)
+	{
+		k=e+f;
+		n=0;
+		while(k>=c)
+		{
+			n+=k/c;
+			k=k%c+k/c;
+		}
+		cout<<n<<endl;
+	}
+	return 0;
+}

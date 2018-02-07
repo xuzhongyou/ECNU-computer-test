@@ -1,0 +1,30 @@
+#include "iostream"
+#include "string.h"
+using namespace std;
+ 
+ 
+ 
+int main()
+{
+	char c[10001];
+	int ch,no,ot;
+	int n,i,j;
+	cin>>n;
+	gets(c);
+	for(i=0;i<n;i++)
+	{
+		gets(c);
+		ch=no=ot=0;
+		for(j=0;c[j]!='\0';j++)
+		{
+			if(c[j]>='A'&&c[j]<='Z')ch++;
+			else if(c[j]>='a'&&c[j]<='z')ch++;
+			else if(c[j]>='0'&&c[j]<='9')no++;
+			else ot++;
+		}
+		cout<<"character:"<<ch<<endl;
+		cout<<"number:"<<no<<endl;
+		cout<<"others:"<<ot<<endl;
+	}
+	return 0;
+}

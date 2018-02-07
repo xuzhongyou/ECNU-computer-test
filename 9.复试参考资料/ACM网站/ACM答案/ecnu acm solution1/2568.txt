@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+ 
+int digit(int a,int b)
+{
+	int c,i;
+	c=a+b;
+	if(c==0)return 1;
+	for(i=0;c!=0;i++)
+	{
+		c=c/10;
+	}
+	return i;
+}
+ 
+int main(int argc, char* argv[])
+{
+	int n,a,b,i;
+	cin>>n;
+	for(i=0;i<n;i++)
+	{
+		cin>>a>>b;
+		cout<<digit(a,b)<<endl;
+	}
+	return 0;
+}

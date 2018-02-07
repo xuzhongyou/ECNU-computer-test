@@ -1,0 +1,20 @@
+#include "iostream"
+#include "algorithm"
+using namespace std;
+ 
+int main(int argc, char* argv[])
+{
+	int i,n,count,k;
+	int a[100000],b;
+	cin>>n;
+	for(i=0;i<n;i++)
+		cin>>a[i];
+	sort(a,a+n);
+	cin>>count;
+	for(i=0;i<count;i++)
+	{
+		cin>>b;
+	    cout<<a[b-1]<<endl;
+	}		
+	return 0;
+}

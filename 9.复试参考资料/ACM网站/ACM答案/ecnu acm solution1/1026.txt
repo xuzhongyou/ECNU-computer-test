@@ -1,0 +1,19 @@
+#include "stdio.h"
+#include "iostream"
+#include "cmath"
+using namespace std;
+ 
+int main(int argc, char* argv[])
+{
+	int n,i;
+	double h,t;
+	for(cin>>n;n>0;cin>>n)
+	{
+		if(n<=3)h=5*(n-1)+1.75;
+	    else h=10+3*(n-3)+1.75;
+	    t=sqrt(2*h/9.8);
+	    printf("%.3f\n",t);
+	}
+	return 0;
+ 
+}

@@ -1,0 +1,17 @@
+#include "stdio.h"
+#include "iostream"
+using namespace std;
+ 
+int main()
+{
+  int m,i,n,count;
+  cin>>m;
+  for(i=0;i<m;i++)
+  {
+	  cin>>n;
+	  for(count=0;n>=5;n/=5)
+		  count+=n/5;
+	  cout<<count<<endl;
+  }
+  return 0;
+}
