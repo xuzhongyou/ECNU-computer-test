@@ -49,3 +49,22 @@ for i in result:
         print('1/1')
     else:
         print(i)
+
+
+#法二
+import math
+n = int(input())
+result_dict = {}
+for i in range(1,n+1):
+    for j in range(i+1,n+1):
+        if i == 1:
+            result_dict['1/%d'%(j)] = i/j
+            continue
+        if math.gcd(i,j) == 1:
+            result_dict['%d/%d'%(i,j)] = i/j
+result_dict['0/1']=0
+result_dict['1/1'] = 1
+# print(result_dict)
+result = sorted(result_dict.items(),key=lambda item:item[1])
+for rst in result:
+    print(rst[0])
