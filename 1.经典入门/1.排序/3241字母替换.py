@@ -1,6 +1,9 @@
 """
 @Time:2017/12/29 11:02
 @Author:xuzhongyou
+@Source:ECNU Online Judge
+@Problem:3241
+@Website:http://acm.ecnu.edu.cn/problem/3241/
 """
 #输入一个长度不超过80的字符串S，将字符串S中所有下标为偶数位置的英文字母转换为小写字母，若该位置上不是字母，则不转换。
 
@@ -19,7 +22,19 @@
 # case #2:
 # ?Df":*(**^&WeqwewE
 
+if __name__ == '__main__':
+	T = int(input())
+	for cs in range(T):
+		raw = input()
+		raw = list(raw)
+		s = [s.lower() if i%2==0 else s for i, s in enumerate(raw)]
+		s = ''.join(s)
+		print("case #%d:"%cs)
+		print(s)
+
+
 #Tips:少一个：也是无法AC的
+"""
 input_n = int(input())
 def char_replace(input_n):
     temp_n = input_n
@@ -33,6 +48,4 @@ def char_replace(input_n):
         print("".join(str_1))
         temp_n -= 1
 char_replace(input_n)
-
-
-
+"""
