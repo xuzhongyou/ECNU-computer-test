@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1458041528 source:c:\users\35336\desktop\复试\代码\王道笔记\第八章：其他技巧\单词替换\main.cpp
+	<iostream>
+	<stdio.h>
+	<string>
+

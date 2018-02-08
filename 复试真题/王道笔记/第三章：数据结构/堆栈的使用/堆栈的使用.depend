@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1458198404 source:c:\users\35336\desktop\复试\代码\王道笔记\第三章：数据结构\堆栈的使用\main.cpp
+	<iostream>
+	<stdio.h>
+	<stack>
+	<stdlib.h>
+

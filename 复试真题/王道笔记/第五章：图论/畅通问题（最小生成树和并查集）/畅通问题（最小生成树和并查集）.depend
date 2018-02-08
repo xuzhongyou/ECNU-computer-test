@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1457423396 source:c:\users\35336\desktop\复试\代码\王道笔记\第五章：图论\畅通问题（最小生成树和并查集）\main.cpp
+	<iostream>
+	<stdio.h>
+	<algorithm>
+

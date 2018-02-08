@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1457695760 source:c:\users\35336\desktop\复试\代码\模拟天勤\题2（other 万妖）\main.cpp
+	<iostream>
+	<vector>
+	<queue>
+	<algorithm>
+	<stdio.h>
+

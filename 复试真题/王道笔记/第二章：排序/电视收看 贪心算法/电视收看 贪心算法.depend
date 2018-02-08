@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1458118959 source:c:\users\35336\desktop\复试\代码\王道笔记\第二章：排序\电视收看 贪心算法\main.cpp
+	<iostream>
+	<algorithm>
+	<string.h>
+	<stdio.h>
+

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1457336893 source:c:\users\35336\desktop\复试\代码\杭电oj\1013(大数！ 用字符串)\main.cpp
+	<iostream>
+	<stdio.h>
+	<string.h>
+

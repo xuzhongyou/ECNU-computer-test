@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1458464971 source:c:\users\35336\desktop\复试\代码\2009\计算和的数位（大数）\main.cpp
+	<iostream>
+	<stdio.h>
+	<string.h>
+
