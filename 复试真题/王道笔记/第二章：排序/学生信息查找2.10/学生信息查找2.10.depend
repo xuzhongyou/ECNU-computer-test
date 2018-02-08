@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1456394569 source:c:\users\35336\desktop\复试\代码\王道笔记\第二章：排序\学生信息查找2.10\main.cpp
+	<iostream>
+	<algorithm>
+	<string.h>
+	<stdio.h>
+

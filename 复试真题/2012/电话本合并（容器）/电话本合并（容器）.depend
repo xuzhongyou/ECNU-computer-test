@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1458567816 source:c:\users\35336\desktop\复试\代码\2012\电话本合并（容器）\main.cpp
+	<iostream>
+	<stdio.h>
+	<vector>
+	<set>
+	<algorithm>
+	<string.h>
+

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1458902296 source:c:\users\35336\desktop\复试\代码\2014\斐波拉契矩阵（第四题 重写）\main.cpp
+	<iostream>
+	<stdio.h>
+	<string.h>
+

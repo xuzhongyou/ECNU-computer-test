@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1456908304 source:c:\users\35336\desktop\复试\代码\杭电oj\二叉树遍历（已知中序和后序求先序）\main.cpp
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1457852944 source:c:\users\35336\desktop\复试\代码\王道笔记\第六章：枚举\广度优先搜索\main.cpp
+	<iostream>
+	<queue>
+	<stdio.h>
+

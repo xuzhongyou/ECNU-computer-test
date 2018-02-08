@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1458560367 source:c:\users\35336\desktop\复试\代码\2012\十六进制的加法\main.cpp
+	<iostream>
+	<stdio.h>
+	<math.h>
+	<string.h>
+
