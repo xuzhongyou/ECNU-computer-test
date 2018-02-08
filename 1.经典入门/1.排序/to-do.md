@@ -1,0 +1,6 @@
+- [ ] [随机排序](http://acm.ecnu.edu.cn/problem/2896/)
+- [ ] [Median](http://acm.ecnu.edu.cn/problem/2654/)
+- [ ] [逃课吃鸡](http://acm.ecnu.edu.cn/problem/3368/)
+- [ ] [林吉吉的野望](http://acm.ecnu.edu.cn/problem/3350/)
+- [ ] [皇后问题](http://acm.ecnu.edu.cn/problem/3346/)
+- [ ] 历年真题
