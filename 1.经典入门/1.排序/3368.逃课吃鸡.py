@@ -38,24 +38,17 @@ Examples
         28
 """
 if __name__ == '__main__':
-    total = 0
-    result = {}
-    num = int(input())
-    for i in range(0, num):
-        raw = (input()).split(' ')
-        key = raw[0]
-        value = int(raw[1])
-        try:
-            result[key]
-            result[key].append(value)
-        except KeyError:
-            result[key] = [value]
-
-    for key in result.keys():
-        value_lst = result[key]
-        value_lst.sort(reverse=True)
-        if len(value_lst) == 1:
-            total += value_lst[0]
-        else:
-            total += sum([value_lst[0], value_lst[1]])
-    print(total)
+    N = int(input())
+    DD = {}
+    timetotal = 0
+    for N in range(N):
+        lesson, time = input().split()
+        time = int(time)
+        DD[lesson] = DD.get(lesson,[0,0])
+        if time > DD[lesson][0]:
+            DD[lesson] = [time,DD[lesson][0]]
+        elif time > DD[lesson][1]:
+            DD[lesson][1] = time
+    for onelesson in DD.keys():
+        timetotal += DD[onelesson][0]+DD[onelesson][1]
+    print(timetotal)
