@@ -9,6 +9,6 @@ num = int(input())
 for i in range(num):
     #每一行有2n+2个字符
     star = num+2*i
-    blank = 2*num+2 - star
+    blank = num + (num-1)*2 - star
     str_ = " "*blank +"*"*star
     print(str_)
