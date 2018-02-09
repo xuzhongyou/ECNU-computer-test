@@ -50,3 +50,18 @@ if __name__ == '__main__':
             print(*string_sorted, sep=' ')
         except EOFError:
             break
+
+# def my_rule(str_):
+#     my_dict = {}
+#     for index,item in enumerate(rule):
+#         my_dict[item] = chr(97 + index)
+#     result = []
+#     for str_item in str_:
+#         result.append(my_dict[str_item.upper()])
+#     return ''.join(result)
+
+# if __name__ == '__main__':
+#     rule = list(input())
+#     strings = input().split(' ')
+#     result = sorted(strings,key=lambda item:my_rule(item))
+#     print(' '.join(result))
