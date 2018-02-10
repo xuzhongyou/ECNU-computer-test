@@ -33,15 +33,20 @@ def num_generate(N, A, X0, B, M):
         num.append((num[i-1]*A + B) % M)
 
 if __name__ == '__main__':
-    raw = (input()).split(' ')
-    N, A, X0, B, M = [int(num) for num in raw]
-    num_generate(N, A, X0, B, M)
-    HASH = [0] * M
-    for val in num:
-        HASH[val] += 1
-    sum = 0
-    for i in range(M):
-        sum += HASH[i]
-        if sum == (N//2+1):
-            print(i)
+    while True:
+        try:
+            raw = (input().strip()).split(' ')
+            N, A, X0, B, M = [int(num) for num in raw]
+            num_generate(N, A, X0, B, M)
+            HASH_Size =  max(M, X0) + 1
+            HASH = [0] * (HASH_Size)
+            for val in num:
+                HASH[val] += 1
+            sum = 0
+            for i in range(HASH_Size):
+                sum += HASH[i]
+                if sum >= (N//2+1):
+                    print(i)
+                    break
+        except EOFError:
             break
