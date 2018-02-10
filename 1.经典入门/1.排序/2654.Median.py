@@ -26,8 +26,6 @@ Example
     output
         25
 """
-from statistics import median
-
 def num_generate(N, A, X0, B, M):
     global num
     num = [X0]
@@ -36,6 +34,14 @@ def num_generate(N, A, X0, B, M):
 
 if __name__ == '__main__':
     raw = (input()).split(' ')
-    raw_num = [int(num) for num in raw]
-    num_generate(raw_num[0], raw_num[1], raw_num[2], raw_num[3], raw_num[4])
-    print(median(num))
+    N, A, X0, B, M = [int(num) for num in raw]
+    num_generate(N, A, X0, B, M)
+    HASH = [0] * M
+    for val in num:
+        HASH[val] += 1
+    sum = 0
+    for i in range(M):
+        sum += HASH[i]
+        if sum == (N//2+1):
+            print(i)
+            break
