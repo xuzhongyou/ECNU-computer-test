@@ -26,6 +26,51 @@ Example
     output
         25
 """
+
+# Solution in C
+"""
+#include <stdlib.h>
+#include <stdio.h>
+
+int N, A, X0, B, M;
+
+int main()
+{
+    while(scanf("%d %d %d %d %d", &N, &A, &X0, &B, &M)!=EOF)
+    {
+       static int num[1000000];
+       num[0] = X0;
+
+       for(int i=1; i <N; i++)
+       {
+           num[i] = (num[i-1]*A + B) % M;
+       }
+        int HASH_SIZE;
+        HASH_SIZE = M>X0?M:X0;
+
+       int HASH[HASH_SIZE];
+
+       for(int i=0; i<HASH_SIZE; i++)
+            HASH[i] = 0;
+
+        for (int i=0; i<N; i++)
+            HASH[num[i]]++;
+
+        int sum =0;
+        for (int i=0; i<HASH_SIZE; i++)
+        {
+
+            sum += HASH[i];
+            if(sum >= (N/2 + 1))
+            {
+                printf("%d\n", i);
+                break;
+            }
+        }
+    }
+}
+"""
+
 def num_generate(N, A, X0, B, M):
     global num
     num = [X0]
