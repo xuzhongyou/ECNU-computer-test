@@ -1,0 +1,645 @@
+
+<!-- saved from url=(0055)http://acm.ecnu.edu.cn/problem/2654/submission/1082368/ -->
+<html lang="en" class="gr__acm_ecnu_edu_cn"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="http://acm.ecnu.edu.cn/static/favicon.ico">
+  <link rel="stylesheet" href="./Submission #1082368 - ECNU Online Judge_files/open-sans.css">
+  <link rel="stylesheet" href="./Submission #1082368 - ECNU Online Judge_files/font-awesome.min.css">
+  <link rel="stylesheet" href="./Submission #1082368 - ECNU Online Judge_files/app.min.css">
+  <link rel="stylesheet" href="./Submission #1082368 - ECNU Online Judge_files/simplemde.min.css">
+  <script src="./Submission #1082368 - ECNU Online Judge_files/jquery.min.js.下载"></script>
+  
+  
+  <title>Submission #1082368 - ECNU Online Judge</title>
+<style id="ace_editor.css">.ace_editor {position: relative;overflow: hidden;font: 12px/normal 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;direction: ltr;text-align: left;-webkit-tap-highlight-color: rgba(0, 0, 0, 0);}.ace_scroller {position: absolute;overflow: hidden;top: 0;bottom: 0;background-color: inherit;-ms-user-select: none;-moz-user-select: none;-webkit-user-select: none;user-select: none;cursor: text;}.ace_content {position: absolute;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;min-width: 100%;}.ace_dragging .ace_scroller:before{position: absolute;top: 0;left: 0;right: 0;bottom: 0;content: '';background: rgba(250, 250, 250, 0.01);z-index: 1000;}.ace_dragging.ace_dark .ace_scroller:before{background: rgba(0, 0, 0, 0.01);}.ace_selecting, .ace_selecting * {cursor: text !important;}.ace_gutter {position: absolute;overflow : hidden;width: auto;top: 0;bottom: 0;left: 0;cursor: default;z-index: 4;-ms-user-select: none;-moz-user-select: none;-webkit-user-select: none;user-select: none;}.ace_gutter-active-line {position: absolute;left: 0;right: 0;}.ace_scroller.ace_scroll-left {box-shadow: 17px 0 16px -16px rgba(0, 0, 0, 0.4) inset;}.ace_gutter-cell {padding-left: 19px;padding-right: 6px;background-repeat: no-repeat;}.ace_gutter-cell.ace_error {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAABOFBMVEX/////////QRswFAb/Ui4wFAYwFAYwFAaWGAfDRymzOSH/PxswFAb/SiUwFAYwFAbUPRvjQiDllog5HhHdRybsTi3/Tyv9Tir+Syj/UC3////XurebMBIwFAb/RSHbPx/gUzfdwL3kzMivKBAwFAbbvbnhPx66NhowFAYwFAaZJg8wFAaxKBDZurf/RB6mMxb/SCMwFAYwFAbxQB3+RB4wFAb/Qhy4Oh+4QifbNRcwFAYwFAYwFAb/QRzdNhgwFAYwFAbav7v/Uy7oaE68MBK5LxLewr/r2NXewLswFAaxJw4wFAbkPRy2PyYwFAaxKhLm1tMwFAazPiQwFAaUGAb/QBrfOx3bvrv/VC/maE4wFAbRPBq6MRO8Qynew8Dp2tjfwb0wFAbx6eju5+by6uns4uH9/f36+vr/GkHjAAAAYnRSTlMAGt+64rnWu/bo8eAA4InH3+DwoN7j4eLi4xP99Nfg4+b+/u9B/eDs1MD1mO7+4PHg2MXa347g7vDizMLN4eG+Pv7i5evs/v79yu7S3/DV7/498Yv24eH+4ufQ3Ozu/v7+y13sRqwAAADLSURBVHjaZc/XDsFgGIBhtDrshlitmk2IrbHFqL2pvXf/+78DPokj7+Fz9qpU/9UXJIlhmPaTaQ6QPaz0mm+5gwkgovcV6GZzd5JtCQwgsxoHOvJO15kleRLAnMgHFIESUEPmawB9ngmelTtipwwfASilxOLyiV5UVUyVAfbG0cCPHig+GBkzAENHS0AstVF6bacZIOzgLmxsHbt2OecNgJC83JERmePUYq8ARGkJx6XtFsdddBQgZE2nPR6CICZhawjA4Fb/chv+399kfR+MMMDGOQAAAABJRU5ErkJggg==");background-repeat: no-repeat;background-position: 2px center;}.ace_gutter-cell.ace_warning {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAmVBMVEX///8AAAD///8AAAAAAABPSzb/5sAAAAB/blH/73z/ulkAAAAAAAD85pkAAAAAAAACAgP/vGz/rkDerGbGrV7/pkQICAf////e0IsAAAD/oED/qTvhrnUAAAD/yHD/njcAAADuv2r/nz//oTj/p064oGf/zHAAAAA9Nir/tFIAAAD/tlTiuWf/tkIAAACynXEAAAAAAAAtIRW7zBpBAAAAM3RSTlMAABR1m7RXO8Ln31Z36zT+neXe5OzooRDfn+TZ4p3h2hTf4t3k3ucyrN1K5+Xaks52Sfs9CXgrAAAAjklEQVR42o3PbQ+CIBQFYEwboPhSYgoYunIqqLn6/z8uYdH8Vmdnu9vz4WwXgN/xTPRD2+sgOcZjsge/whXZgUaYYvT8QnuJaUrjrHUQreGczuEafQCO/SJTufTbroWsPgsllVhq3wJEk2jUSzX3CUEDJC84707djRc5MTAQxoLgupWRwW6UB5fS++NV8AbOZgnsC7BpEAAAAABJRU5ErkJggg==");background-position: 2px center;}.ace_gutter-cell.ace_info {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAAAAAA6mKC9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAJ0Uk5TAAB2k804AAAAPklEQVQY02NgIB68QuO3tiLznjAwpKTgNyDbMegwisCHZUETUZV0ZqOquBpXj2rtnpSJT1AEnnRmL2OgGgAAIKkRQap2htgAAAAASUVORK5CYII=");background-position: 2px center;}.ace_dark .ace_gutter-cell.ace_info {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAJFBMVEUAAAChoaGAgIAqKiq+vr6tra1ZWVmUlJSbm5s8PDxubm56enrdgzg3AAAAAXRSTlMAQObYZgAAAClJREFUeNpjYMAPdsMYHegyJZFQBlsUlMFVCWUYKkAZMxZAGdxlDMQBAG+TBP4B6RyJAAAAAElFTkSuQmCC");}.ace_scrollbar {position: absolute;right: 0;bottom: 0;z-index: 6;}.ace_scrollbar-inner {position: absolute;cursor: text;left: 0;top: 0;}.ace_scrollbar-v{overflow-x: hidden;overflow-y: scroll;top: 0;}.ace_scrollbar-h {overflow-x: scroll;overflow-y: hidden;left: 0;}.ace_print-margin {position: absolute;height: 100%;}.ace_text-input {position: absolute;z-index: 0;width: 0.5em;height: 1em;opacity: 0;background: transparent;-moz-appearance: none;appearance: none;border: none;resize: none;outline: none;overflow: hidden;font: inherit;padding: 0 1px;margin: 0 -1px;text-indent: -1em;-ms-user-select: text;-moz-user-select: text;-webkit-user-select: text;user-select: text;white-space: pre!important;}.ace_text-input.ace_composition {background: inherit;color: inherit;z-index: 1000;opacity: 1;text-indent: 0;}.ace_layer {z-index: 1;position: absolute;overflow: hidden;word-wrap: normal;white-space: pre;height: 100%;width: 100%;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;pointer-events: none;}.ace_gutter-layer {position: relative;width: auto;text-align: right;pointer-events: auto;}.ace_text-layer {font: inherit !important;}.ace_cjk {display: inline-block;text-align: center;}.ace_cursor-layer {z-index: 4;}.ace_cursor {z-index: 4;position: absolute;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;border-left: 2px solid;transform: translatez(0);}.ace_multiselect .ace_cursor {border-left-width: 1px;}.ace_slim-cursors .ace_cursor {border-left-width: 1px;}.ace_overwrite-cursors .ace_cursor {border-left-width: 0;border-bottom: 1px solid;}.ace_hidden-cursors .ace_cursor {opacity: 0.2;}.ace_smooth-blinking .ace_cursor {-webkit-transition: opacity 0.18s;transition: opacity 0.18s;}.ace_marker-layer .ace_step, .ace_marker-layer .ace_stack {position: absolute;z-index: 3;}.ace_marker-layer .ace_selection {position: absolute;z-index: 5;}.ace_marker-layer .ace_bracket {position: absolute;z-index: 6;}.ace_marker-layer .ace_active-line {position: absolute;z-index: 2;}.ace_marker-layer .ace_selected-word {position: absolute;z-index: 4;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}.ace_line .ace_fold {-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;display: inline-block;height: 11px;margin-top: -2px;vertical-align: middle;background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSokD8GmjwY1wasKljQpYACtpCFeADcHVQfQyMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErIH0VqkabiGCAqwUadAzZJRxQr/0gwiXIal8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqNrA4WO4zY0glyNKLT2KIfIMAAQsdgGiXvgnYAAAAASUVORK5CYII="),url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACJJREFUeNpi+P//fxgTAwPDBxDxD078RSX+YeEyDFMCIMAAI3INmXiwf2YAAAAASUVORK5CYII=");background-repeat: no-repeat, repeat-x;background-position: center center, top left;color: transparent;border: 1px solid black;border-radius: 2px;cursor: pointer;pointer-events: auto;}.ace_dark .ace_fold {}.ace_fold:hover{background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSokD8GmjwY1wasKljQpYACtpCFeADcHVQfQyMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErIH0VqkabiGCAqwUadAzZJRxQr/0gwiXIal8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqNrA4WO4zY0glyNKLT2KIfIMAAQsdgGiXvgnYAAAAASUVORK5CYII="),url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACBJREFUeNpi+P//fz4TAwPDZxDxD5X4i5fLMEwJgAADAEPVDbjNw87ZAAAAAElFTkSuQmCC");}.ace_tooltip {background-color: #FFF;background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.1));background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.1));border: 1px solid gray;border-radius: 1px;box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);color: black;max-width: 100%;padding: 3px 4px;position: fixed;z-index: 999999;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;cursor: default;white-space: pre;word-wrap: break-word;line-height: normal;font-style: normal;font-weight: normal;letter-spacing: normal;pointer-events: none;}.ace_folding-enabled > .ace_gutter-cell {padding-right: 13px;}.ace_fold-widget {-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;margin: 0 -12px 0 1px;display: none;width: 11px;vertical-align: top;background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42mWKsQ0AMAzC8ixLlrzQjzmBiEjp0A6WwBCSPgKAXoLkqSot7nN3yMwR7pZ32NzpKkVoDBUxKAAAAABJRU5ErkJggg==");background-repeat: no-repeat;background-position: center;border-radius: 3px;border: 1px solid transparent;cursor: pointer;}.ace_folding-enabled .ace_fold-widget {display: inline-block;   }.ace_fold-widget.ace_end {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42m3HwQkAMAhD0YzsRchFKI7sAikeWkrxwScEB0nh5e7KTPWimZki4tYfVbX+MNl4pyZXejUO1QAAAABJRU5ErkJggg==");}.ace_fold-widget.ace_closed {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAGCAYAAAAG5SQMAAAAOUlEQVR42jXKwQkAMAgDwKwqKD4EwQ26sSOkVWjgIIHAzPiCgaqiqnJHZnKICBERHN194O5b9vbLuAVRL+l0YWnZAAAAAElFTkSuQmCCXA==");}.ace_fold-widget:hover {border: 1px solid rgba(0, 0, 0, 0.3);background-color: rgba(255, 255, 255, 0.2);box-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);}.ace_fold-widget:active {border: 1px solid rgba(0, 0, 0, 0.4);background-color: rgba(0, 0, 0, 0.05);box-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);}.ace_dark .ace_fold-widget {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHklEQVQIW2P4//8/AzoGEQ7oGCaLLAhWiSwB146BAQCSTPYocqT0AAAAAElFTkSuQmCC");}.ace_dark .ace_fold-widget.ace_end {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAH0lEQVQIW2P4//8/AxQ7wNjIAjDMgC4AxjCVKBirIAAF0kz2rlhxpAAAAABJRU5ErkJggg==");}.ace_dark .ace_fold-widget.ace_closed {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAFCAYAAACAcVaiAAAAHElEQVQIW2P4//+/AxAzgDADlOOAznHAKgPWAwARji8UIDTfQQAAAABJRU5ErkJggg==");}.ace_dark .ace_fold-widget:hover {box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);background-color: rgba(255, 255, 255, 0.1);}.ace_dark .ace_fold-widget:active {box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);}.ace_fold-widget.ace_invalid {background-color: #FFB4B4;border-color: #DE5555;}.ace_fade-fold-widgets .ace_fold-widget {-webkit-transition: opacity 0.4s ease 0.05s;transition: opacity 0.4s ease 0.05s;opacity: 0;}.ace_fade-fold-widgets:hover .ace_fold-widget {-webkit-transition: opacity 0.05s ease 0.05s;transition: opacity 0.05s ease 0.05s;opacity:1;}.ace_underline {text-decoration: underline;}.ace_bold {font-weight: bold;}.ace_nobold .ace_bold {font-weight: normal;}.ace_italic {font-style: italic;}.ace_error-marker {background-color: rgba(255, 0, 0,0.2);position: absolute;z-index: 9;}.ace_highlight-marker {background-color: rgba(255, 255, 0,0.2);position: absolute;z-index: 8;}.ace_br1 {border-top-left-radius    : 3px;}.ace_br2 {border-top-right-radius   : 3px;}.ace_br3 {border-top-left-radius    : 3px; border-top-right-radius:    3px;}.ace_br4 {border-bottom-right-radius: 3px;}.ace_br5 {border-top-left-radius    : 3px; border-bottom-right-radius: 3px;}.ace_br6 {border-top-right-radius   : 3px; border-bottom-right-radius: 3px;}.ace_br7 {border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-right-radius: 3px;}.ace_br8 {border-bottom-left-radius : 3px;}.ace_br9 {border-top-left-radius    : 3px; border-bottom-left-radius:  3px;}.ace_br10{border-top-right-radius   : 3px; border-bottom-left-radius:  3px;}.ace_br11{border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-left-radius:  3px;}.ace_br12{border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br13{border-top-left-radius    : 3px; border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br14{border-top-right-radius   : 3px; border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br15{border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px;}.ace_text-input-ios {position: absolute !important;top: -100000px !important;left: -100000px !important;}
+/*# sourceURL=ace/css/ace_editor.css */</style><style id="ace-tm">.ace-tm .ace_gutter {background: #f0f0f0;color: #333;}.ace-tm .ace_print-margin {width: 1px;background: #e8e8e8;}.ace-tm .ace_fold {background-color: #6B72E6;}.ace-tm {background-color: #FFFFFF;color: black;}.ace-tm .ace_cursor {color: black;}.ace-tm .ace_invisible {color: rgb(191, 191, 191);}.ace-tm .ace_storage,.ace-tm .ace_keyword {color: blue;}.ace-tm .ace_constant {color: rgb(197, 6, 11);}.ace-tm .ace_constant.ace_buildin {color: rgb(88, 72, 246);}.ace-tm .ace_constant.ace_language {color: rgb(88, 92, 246);}.ace-tm .ace_constant.ace_library {color: rgb(6, 150, 14);}.ace-tm .ace_invalid {background-color: rgba(255, 0, 0, 0.1);color: red;}.ace-tm .ace_support.ace_function {color: rgb(60, 76, 114);}.ace-tm .ace_support.ace_constant {color: rgb(6, 150, 14);}.ace-tm .ace_support.ace_type,.ace-tm .ace_support.ace_class {color: rgb(109, 121, 222);}.ace-tm .ace_keyword.ace_operator {color: rgb(104, 118, 135);}.ace-tm .ace_string {color: rgb(3, 106, 7);}.ace-tm .ace_comment {color: rgb(76, 136, 107);}.ace-tm .ace_comment.ace_doc {color: rgb(0, 102, 255);}.ace-tm .ace_comment.ace_doc.ace_tag {color: rgb(128, 159, 191);}.ace-tm .ace_constant.ace_numeric {color: rgb(0, 0, 205);}.ace-tm .ace_variable {color: rgb(49, 132, 149);}.ace-tm .ace_xml-pe {color: rgb(104, 104, 91);}.ace-tm .ace_entity.ace_name.ace_function {color: #0000A2;}.ace-tm .ace_heading {color: rgb(12, 7, 255);}.ace-tm .ace_list {color:rgb(185, 6, 144);}.ace-tm .ace_meta.ace_tag {color:rgb(0, 22, 142);}.ace-tm .ace_string.ace_regex {color: rgb(255, 0, 0)}.ace-tm .ace_marker-layer .ace_selection {background: rgb(181, 213, 255);}.ace-tm.ace_multiselect .ace_selection.ace_start {box-shadow: 0 0 3px 0px white;}.ace-tm .ace_marker-layer .ace_step {background: rgb(252, 255, 0);}.ace-tm .ace_marker-layer .ace_stack {background: rgb(164, 229, 101);}.ace-tm .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid rgb(192, 192, 192);}.ace-tm .ace_marker-layer .ace_active-line {background: rgba(0, 0, 0, 0.07);}.ace-tm .ace_gutter-active-line {background-color : #dcdcdc;}.ace-tm .ace_marker-layer .ace_selected-word {background: rgb(250, 250, 255);border: 1px solid rgb(200, 200, 250);}.ace-tm .ace_indent-guide {background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAE0lEQVQImWP4////f4bLly//BwAmVgd1/w11/gAAAABJRU5ErkJggg==") right repeat-y;}
+/*# sourceURL=ace/css/ace-tm */</style><style>    .error_widget_wrapper {        background: inherit;        color: inherit;        border:none    }    .error_widget {        border-top: solid 2px;        border-bottom: solid 2px;        margin: 5px 0;        padding: 10px 40px;        white-space: pre-wrap;    }    .error_widget.ace_error, .error_widget_arrow.ace_error{        border-color: #ff5a5a    }    .error_widget.ace_warning, .error_widget_arrow.ace_warning{        border-color: #F1D817    }    .error_widget.ace_info, .error_widget_arrow.ace_info{        border-color: #5a5a5a    }    .error_widget.ace_ok, .error_widget_arrow.ace_ok{        border-color: #5aaa5a    }    .error_widget_arrow {        position: absolute;        border: solid 5px;        border-top-color: transparent!important;        border-right-color: transparent!important;        border-left-color: transparent!important;        top: -5px;    }</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style></head>
+
+<body class="local-body" data-gr-c-s-loaded="true"><div id="MathJax_Message" style="display: none;"></div>
+
+
+
+
+
+
+
+<div class="ui top fixed menu" id="navbar">
+
+  <div class="ui container" id="navbar-small">
+    <div class="ui pointing dropdown link item" tabindex="0">
+      <i class="content icon"></i>
+      <span class="text"><b>EOJ</b></span>
+      <div class="menu" tabindex="-1">
+        <a class="item" href="http://acm.ecnu.edu.cn/">Homepage</a>
+        <div class="divider"></div>
+        <div class="header">Problemset</div>
+        <a class="item" href="http://acm.ecnu.edu.cn/problem/">Problem</a>
+        <a class="item" href="http://acm.ecnu.edu.cn/problem/source/">Source</a>
+        <a class="item" href="http://acm.ecnu.edu.cn/problem/millionaire/">Millionaire</a>
+        <a class="item" href="http://acm.ecnu.edu.cn/problem/status/">Status</a>
+        <div class="divider"></div>
+        <div class="header">Contests</div>
+        <a class="item" href="http://acm.ecnu.edu.cn/contest/">Regular</a>
+        <a class="item" href="http://acm.ecnu.edu.cn/contest/gym/">Gym</a>
+      </div>
+    </div>
+
+    <div class="right menu">
+      
+  
+    <div class="ui dropdown simple item">
+      <div class="text">欢迎访问我的主页!http://godweiyang.com</div>
+      <i class="dropdown icon"></i>
+      <div class="menu">
+        <a class="item" href="http://acm.ecnu.edu.cn/generic/56/">Blog</a>
+        <a class="item" href="http://acm.ecnu.edu.cn/problem/status/?user=56">Submissions</a>
+        <a class="item" href="http://acm.ecnu.edu.cn/account/settings/profile/">Settings</a>
+        <a class="item" href="http://acm.ecnu.edu.cn/account/settings/payment/">Payment</a>
+        <a class="item" href="http://acm.ecnu.edu.cn/migrate/">Migrate</a>
+        <a class="item" href="http://acm.ecnu.edu.cn/feedback/">Feedback</a>
+      
+        <a class="item" href="http://acm.ecnu.edu.cn/logout/?next=/problem/2654/submission/1082368/">Logout</a>
+      </div>
+    </div>
+  
+
+    </div>
+  </div>
+
+  <div class="ui container" id="navbar-large">
+    <a class=" item" href="http://acm.ecnu.edu.cn/">Home</a>
+    <a class="item active" href="http://acm.ecnu.edu.cn/problem/">Problems</a>
+    <a class="item " href="http://acm.ecnu.edu.cn/contest/">Contests</a>
+    <div class="right menu">
+      <div class="ui category search item massive-search">
+        <div class="ui transparent icon input">
+          <input class="prompt" type="text" placeholder="Search animals..." autocomplete="off">
+          <i class="search link icon"></i>
+        </div>
+        <div class="results"></div>
+      </div>
+      
+  
+    <div class="ui dropdown simple item">
+      <div class="text">欢迎访问我的主页!http://godweiyang.com</div>
+      <i class="dropdown icon"></i>
+      <div class="menu">
+        <a class="item" href="http://acm.ecnu.edu.cn/generic/56/">Blog</a>
+        <a class="item" href="http://acm.ecnu.edu.cn/problem/status/?user=56">Submissions</a>
+        <a class="item" href="http://acm.ecnu.edu.cn/account/settings/profile/">Settings</a>
+        <a class="item" href="http://acm.ecnu.edu.cn/account/settings/payment/">Payment</a>
+        <a class="item" href="http://acm.ecnu.edu.cn/migrate/">Migrate</a>
+        <a class="item" href="http://acm.ecnu.edu.cn/feedback/">Feedback</a>
+      
+        <a class="item" href="http://acm.ecnu.edu.cn/logout/?next=/problem/2654/submission/1082368/">Logout</a>
+      </div>
+    </div>
+  
+
+    </div>
+  </div>
+</div>
+  <div class="pusher">
+  <div class="ui main container">
+    <h1 class="ui header">Submission #1082368</h1>
+    
+
+
+  
+
+<table class="ui celled table structured">
+  <thead>
+    <tr class="center aligned">
+      <th>#</th>
+      
+      <th>Problem</th>
+      
+      <th>Language</th>
+      <th>Sent</th>
+      <th>Judged</th>
+      <th>Verdict</th>
+      
+      <th>CPU</th>
+      
+      <th>Judge</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="center aligned">
+      <th rowspan="2" style="padding:1em">1082368</th>
+    
+      
+        <td><a href="http://acm.ecnu.edu.cn/problem/2654/">2654. Median</a></td>
+      
+    
+      <td>C</td>
+      <td>2018-02-10 12:46:54</td>
+      <td>2018-02-10 12:46:55</td>
+      <td><h5 class="ui header status-span with-icon red" data-status="-1" style="font-weight: 600;"><i class="icon circle fitted remove"></i>Wrong Answer</h5></td>
+      
+      <td>0.012</td>
+      
+      <td>Kangaroo</td>
+      
+    </tr>
+    <tr>
+      
+      
+      
+      
+        
+      
+      <td colspan="7">
+        
+        <div class="testcases" style="display: block;">
+          
+            <span class="status-icon" data-tooltip="1/1: Wrong Answer" data-status="-1"><i class="icon red remove"></i></span>
+          
+        </div>
+        
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+  <a class="ui info icon message" href="http://acm.ecnu.edu.cn/pay/report/?sub=1082368">
+    <i class="circle help outline icon"></i>
+    <div class="content">
+      <div class="header">
+        Need some help?
+      </div>
+      <p>Buy full debug report to see what's wrong.</p>
+    </div>
+  </a>
+
+
+  <div class="ui segment">
+    <div class="ui simple dropdown top right attached label">
+      <i class="code icon"></i> C
+      <div class="menu">
+        <a class="item clipboard" data-clipboard-text="#include &lt;stdlib.h&gt;
+#include &lt;stdio.h&gt;
+
+int N, A, X0, B, M;
+
+int main()
+{
+   scanf(&quot;%d %d %d %d %d&quot;, &amp;N, &amp;A, &amp;X0, &amp;B, &amp;M);
+   int num[1000000];
+   num[0] = X0;
+
+   for(int i=1; i &lt;N; i++)
+   {
+       num[i] = (num[i-1]*A + B) % M;
+   }
+
+   int HASH[M];
+   for(int i=0; i&lt;M; i++)
+        HASH[i] = 0;
+
+    for (int i=0; i&lt;N; i++)
+        HASH[num[i]]++;
+
+    int sum =0;
+    for (int i=0; i&lt;M; i++)
+    {
+
+        sum += HASH[i];
+        if(sum==(N/2 + 1))
+        {
+            printf(&quot;%d&quot;, i);
+            break;
+        }
+    }
+}
+"><i class="copy icon"></i> Copy</a>
+
+
+
+
+
+      </div>
+    </div>
+    <div><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span> <span class="n">N</span><span class="p">,</span> <span class="n">A</span><span class="p">,</span> <span class="n">X0</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">M</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+   <span class="n">scanf</span><span class="p">(</span><span class="s">"%d %d %d %d %d"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">N</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">A</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">X0</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">B</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">M</span><span class="p">);</span>
+   <span class="kt">int</span> <span class="n">num</span><span class="p">[</span><span class="mi">1000000</span><span class="p">];</span>
+   <span class="n">num</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">X0</span><span class="p">;</span>
+
+   <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span><span class="n">N</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+   <span class="p">{</span>
+       <span class="n">num</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">num</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">A</span> <span class="o">+</span> <span class="n">B</span><span class="p">)</span> <span class="o">%</span> <span class="n">M</span><span class="p">;</span>
+   <span class="p">}</span>
+
+   <span class="kt">int</span> <span class="n">HASH</span><span class="p">[</span><span class="n">M</span><span class="p">];</span>
+   <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">M</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+        <span class="n">HASH</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">N</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+        <span class="n">HASH</span><span class="p">[</span><span class="n">num</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span><span class="o">++</span><span class="p">;</span>
+
+    <span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">M</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+
+        <span class="n">sum</span> <span class="o">+=</span> <span class="n">HASH</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">sum</span><span class="o">==</span><span class="p">(</span><span class="n">N</span><span class="o">/</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
+        <span class="p">{</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">"%d"</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+  </div>
+
+  
+<div class="ui header">
+  <i class="ordered list icon"></i>
+  <div class="content">
+    Judge Protocol
+    <div class="sub header">At most 512 bytes are displayed.</div>
+  </div>
+</div>
+
+<div class="submission-report">
+  <div class="passage examples">
+  
+    <div class="indicator"><b>Test #1: time: 0.012s, estimate memory: 36.184 MB, exit code: 0, verdict: WRONG_ANSWER</b></div>
+    <div class="example">
+      <div class="input">
+        <div class="title">Input</div>
+        <pre>1000000 24077 2862 7090 20766 
+1000000 16355 32687 15538 27990 
+1000000 37994 14791 37307 11015 
+1000000 6185 11600 23113 3724 
+1000000 21188 16664 9358 25763 
+1000000 17512 26070 28891 15248 
+1000000 10831 2745 23100 37480 
+1000000 36827 4904 21593 10923 
+1000000 18242 9870 35694 11706 
+1000000 16401 24558 12019 37886 
+1000000 23412 13838 12391 14717 
+1000000 31333 38033 6322 2205 
+1000000 14543 10824 2320 26165 
+1000000 1562 28782 24295 14038 
+1000000 32576 3790 19260 16746 
+1000000 18912 29620 2647 37783...</pre>
+      </div>
+      <div class="output">
+        <div class="title">Output</div>
+        <pre></pre>
+      </div>
+      <div class="answer">
+        <div class="title">Answer</div>
+        <pre>10680
+15263
+5326
+1866
+12915
+7619
+20865
+5498
+5850
+19276
+7358
+1102
+12646
+6905
+8548
+18891
+3034
+4492
+6982
+2505
+3358
+15693
+19710
+13561
+19463
+7354
+15712
+10262
+258
+5095
+236
+14572
+10298
+14341
+17198
+9803
+13619
+9881
+10523
+7760
+15580
+10649
+8331
+10680
+6551
+7483
+4320
+7676
+4030
+4202
+</pre>
+      </div>
+      <div class="checker">
+        <div class="title">Checker's comment</div>
+        <pre>wrong answer: output missing at eof
+</pre>
+      </div>
+    </div>
+  
+  </div>
+</div>
+
+
+  
+    
+      <div id="past-submissions" data-url="/problem/2654/submission/past/">
+
+
+  <h3 class="ui horizontal divider header">
+    PAST SUBMISSIONS
+  </h3>
+
+  <table class="ui celled table striped center aligned compact">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Sent</th>
+        <th>Judged</th>
+        <th>Lang</th>
+        <th>Verdict</th>
+      
+        <th>Time</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr>
+        <td>
+        
+          <a href="http://acm.ecnu.edu.cn/problem/2654/submission/1082368/">1082368</a>
+        
+
+        </td>
+          <td>2018-02-10 12:46:54</td>
+          <td>2018-02-10 12:46:55</td>
+          <td>C</td>
+          <td><h5 class="ui header status-span red" data-status="-1" style="font-weight: 600;">Wrong Answer</h5></td>
+          
+          <td>0.012</td>
+        </tr>
+      
+        <tr>
+        <td>
+        
+          <a href="http://acm.ecnu.edu.cn/problem/2654/submission/1082367/">1082367</a>
+        
+
+        </td>
+          <td>2018-02-10 12:46:42</td>
+          <td>2018-02-10 12:46:42</td>
+          <td>C</td>
+          <td><h5 class="ui header status-span grey" data-status="6" style="font-weight: 600;">Compile Error</h5></td>
+          
+          <td>NaN</td>
+        </tr>
+      
+        <tr>
+        <td>
+        
+          <a href="http://acm.ecnu.edu.cn/problem/2654/submission/1082349/">1082349</a>
+        
+
+        </td>
+          <td>2018-02-10 12:27:27</td>
+          <td>2018-02-10 12:27:28</td>
+          <td>C</td>
+          <td><h5 class="ui header status-span red" data-status="-1" style="font-weight: 600;">Wrong Answer</h5></td>
+          
+          <td>0.012</td>
+        </tr>
+      
+        <tr>
+        <td>
+        
+          <a href="http://acm.ecnu.edu.cn/problem/2654/submission/1082347/">1082347</a>
+        
+
+        </td>
+          <td>2018-02-10 12:24:05</td>
+          <td>2018-02-10 12:24:06</td>
+          <td>C</td>
+          <td><h5 class="ui header status-span red" data-status="-1" style="font-weight: 600;">Wrong Answer</h5></td>
+          
+          <td>0.016</td>
+        </tr>
+      
+        <tr>
+        <td>
+        
+          <a href="http://acm.ecnu.edu.cn/problem/2654/submission/1082340/">1082340</a>
+        
+
+        </td>
+          <td>2018-02-10 11:55:43</td>
+          <td>2018-02-10 11:55:43</td>
+          <td>C</td>
+          <td><h5 class="ui header status-span yellow" data-status="4" style="font-weight: 600;">Runtime Error</h5></td>
+          
+          <td>0.000</td>
+        </tr>
+      
+        <tr>
+        <td>
+        
+          <a href="http://acm.ecnu.edu.cn/problem/2654/submission/1082321/">1082321</a>
+        
+
+        </td>
+          <td>2018-02-10 11:24:36</td>
+          <td>2018-02-10 11:24:36</td>
+          <td>Python 3</td>
+          <td><h5 class="ui header status-span yellow" data-status="4" style="font-weight: 600;">Runtime Error</h5></td>
+          
+          <td>0.024</td>
+        </tr>
+      
+        <tr>
+        <td>
+        
+          <a href="http://acm.ecnu.edu.cn/problem/2654/submission/1082311/">1082311</a>
+        
+
+        </td>
+          <td>2018-02-10 10:58:24</td>
+          <td>2018-02-10 10:58:24</td>
+          <td>Python 3</td>
+          <td><h5 class="ui header status-span yellow" data-status="4" style="font-weight: 600;">Runtime Error</h5></td>
+          
+          <td>0.028</td>
+        </tr>
+      
+        <tr>
+        <td>
+        
+          <a href="http://acm.ecnu.edu.cn/problem/2654/submission/1081493/">1081493</a>
+        
+
+        </td>
+          <td>2018-02-08 21:29:30</td>
+          <td>2018-02-08 21:29:30</td>
+          <td>Python 3</td>
+          <td><h5 class="ui header status-span yellow" data-status="4" style="font-weight: 600;">Runtime Error</h5></td>
+          
+          <td>0.044</td>
+        </tr>
+      
+        <tr>
+        <td>
+        
+          <a href="http://acm.ecnu.edu.cn/problem/2654/submission/1081490/">1081490</a>
+        
+
+        </td>
+          <td>2018-02-08 21:27:28</td>
+          <td>2018-02-08 21:27:29</td>
+          <td>Python 3</td>
+          <td><h5 class="ui header status-span yellow" data-status="4" style="font-weight: 600;">Runtime Error</h5></td>
+          
+          <td>0.040</td>
+        </tr>
+      
+        <tr>
+        <td>
+        
+          <a href="http://acm.ecnu.edu.cn/problem/2654/submission/1081482/">1081482</a>
+        
+
+        </td>
+          <td>2018-02-08 21:21:13</td>
+          <td>2018-02-08 21:21:13</td>
+          <td>Python 3</td>
+          <td><h5 class="ui header status-span red" data-status="-1" style="font-weight: 600;">Wrong Answer</h5></td>
+          
+          <td>0.036</td>
+        </tr>
+      
+    </tbody>
+  </table>
+  
+
+</div>
+    
+  
+  
+
+  </div>
+  <div class="ui inverted vertical footer segment">
+  <div class="ui container">
+    <div class="ui stackable inverted divided equal height stackable grid">
+      <div class="three wide column">
+        <h4 class="ui inverted header">Services</h4>
+        <div class="ui inverted link list">
+          <a href="http://acm.ecnu.edu.cn/" class="item">Homepage</a>
+          <a href="http://acm.ecnu.edu.cn/faq/" class="item">F. A. Q.</a>
+          <a href="http://acm.ecnu.edu.cn/feedback/" class="item">Feedback</a>
+          <a href="http://acm.ecnu.edu.cn/polygon/" class="item">Polygon</a>
+        </div>
+      </div>
+      <div class="three wide column">
+        <h4 class="ui inverted header">Open Source</h4>
+        <div class="ui inverted link list">
+          <a href="https://github.com/ultmaster/eoj3" class="item">Github Repo</a>
+          <a href="https://github.com/ultmaster/ejudge" class="item">eJudge</a>
+          <a href="https://ultmaster.github.io/eoj3/" class="item">EOJ Docs</a>
+        </div>
+      </div>
+      <div class="seven wide column">
+        <h4 class="ui inverted header">Credits</h4>
+        <p>Created by <a href="https://github.com/ultmaster">@ultmaster</a> and <a href="https://github.com/zerolfx">@zerolfx</a>.<br>
+        Contact us via <a href="mailto:acmsupport@admin.ecnu.edu.cn">acmsupport@admin.ecnu.edu.cn</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+
+
+<script type="text/x-mathjax-config;executed=true">
+  MathJax.Hub.Config({
+    messageStyle: "none",
+    config: ["MMLorHTML.js"],
+    jax: ["input/TeX", "output/HTML-CSS", "output/NativeMML"],
+    extensions: ["TeX/AMSmath.js", "TeX/AMSsymbols.js", "MathMenu.js", "MathZoom.js"]
+  });
+</script>
+<script src="./Submission #1082368 - ECNU Online Judge_files/MathJax.js.下载"></script>
+<script src="./Submission #1082368 - ECNU Online Judge_files/moment.js.下载"></script>
+<script src="./Submission #1082368 - ECNU Online Judge_files/clipboard.min.js.下载"></script>
+<script src="./Submission #1082368 - ECNU Online Judge_files/js.cookie.js.下载"></script>
+<script src="./Submission #1082368 - ECNU Online Judge_files/jquery.address.js.下载"></script>
+<script src="./Submission #1082368 - ECNU Online Judge_files/lodash.min.js.下载"></script>
+<script src="./Submission #1082368 - ECNU Online Judge_files/semantic.js.下载"></script>
+<script src="./Submission #1082368 - ECNU Online Judge_files/simplemde.min.js.下载"></script>
+<script src="./Submission #1082368 - ECNU Online Judge_files/ace.js.下载"></script>
+<script src="./Submission #1082368 - ECNU Online Judge_files/underscore.js.下载"></script>
+<script src="./Submission #1082368 - ECNU Online Judge_files/lang-detector.js.下载"></script>
+<script src="./Submission #1082368 - ECNU Online Judge_files/markdown.js.下载"></script>
+<script src="./Submission #1082368 - ECNU Online Judge_files/longpoll.js.下载"></script>
+<script src="./Submission #1082368 - ECNU Online Judge_files/input.file.js.下载"></script>
+<script src="./Submission #1082368 - ECNU Online Judge_files/app.js.下载"></script>
+<script src="./Submission #1082368 - ECNU Online Judge_files/submit.js.下载"></script>
+
+
+
+
+<span id="pablo-extension-hover-button" style="display: none;position: absolute;z-index: 8675309;width: 66px;height: 25px;background-image: url(chrome-extension://gfpibnlcombjoeejlongmihndgkpnjjo/data/shared/img/pablo-hover-icon@1x.png);background-size: 66px 25px;opacity: 0.9;cursor: pointer;"></span></body></html>
