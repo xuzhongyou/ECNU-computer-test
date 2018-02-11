@@ -48,7 +48,7 @@ Examples
 def binary_search(cards, first, second, remain):
     l = second + 1
     r = N - 1
-    temp = 0;
+    temp = 0
     while(l<=r):
         mid = (l + r) // 2
         if cards[mid] == remain:
