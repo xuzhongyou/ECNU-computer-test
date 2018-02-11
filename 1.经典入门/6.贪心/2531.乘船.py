@@ -39,21 +39,15 @@ for _ in range(int(input())):
     ci = list(map(int, input().split()))
     ci.sort()
     count = 0
-    while len(ci) > 1:
-        start, end = 0, -1
-        flag = 0
-        while start < len(ci) + end:
-            if ci[start] + ci[end] <= k:
-                count += 1
-                del ci[start]
-                del ci[end]
-                flag = 1
-                break
-            else:
-                end -= 1
-        if flag ==0:
-            del ci[start]
+    l , r = 0, n-1
+    while l < r:
+        if (ci[l] + ci[r]) <= k:
             count += 1
-    if len(ci) !=0:
+            l += 1
+            r -= 1
+        else:
+            count += 1
+            r -= 1
+    if l == r:
         count += 1
     print(count)
