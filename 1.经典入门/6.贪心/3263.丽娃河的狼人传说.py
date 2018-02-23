@@ -80,3 +80,69 @@ for i in range(T):
         print('Case {n}: {t}'.format(n=i+1, t=install_total))
     else:
         print('Case {n}: -1'.format(n=i+1))
+
+# C++ solution
+"""
+#include<cstdio>
+#include<cstring>
+#include<algorithm>
+#define MAX 1000+5
+using namespace std;
+int n,m,k;
+bool light[MAX];
+struct Seg{
+    int l,r,t;
+}seg[MAX];
+bool cmp(Seg a,Seg b)
+{
+    if(a.r==b.r) return a.l<b.l;
+    else return a.r<b.r;
+}
+int main()
+{
+    int t;
+    scanf("%d",&t);
+    for(int kase=1;kase<=t;kase++)
+    {
+        scanf("%d%d%d",&n,&m,&k);
+        for(int i=1;i<=n;i++) light[i]=0;//init
+        for(int i=1;i<=k;i++)
+        {
+            int tmp;
+            scanf("%d",&tmp);
+            light[tmp]=1;
+        }
+        for(int i=1;i<=m;i++) scanf("%d%d%d",&seg[i].l,&seg[i].r,&seg[i].t);
+        sort(seg+1,seg+m+1,cmp);
+        int ans=0;
+        int flag=1;
+        for(int i=1;i<=m;i++)
+        {
+            if( seg[i].t > seg[i].r-seg[i].l+1 )//输出-1
+            {
+                printf("Case %d: -1\n",kase);
+                flag=0;
+                break;
+            }
+            for(int p=seg[i].l;p<=seg[i].r;p++){
+                if(light[p]) seg[i].t--;
+                if(seg[i].t<=0) break;
+            }//查找当前区间内已有路灯
+            if(seg[i].t>0)//加装路灯
+            {
+                for(int p=seg[i].r;p>=seg[i].l;p--)
+                {
+                    if(!light[p])
+                    {
+                        light[p]=1;
+                        ans++;
+                        seg[i].t--;
+                    }
+                    if(seg[i].t<=0) break;
+                }
+            }
+        }
+        if(flag) printf("Case %d: %d\n",kase,ans);
+    }
+}
+"""
