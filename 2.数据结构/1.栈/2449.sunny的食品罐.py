@@ -44,36 +44,26 @@ Examples
         NO
         YES
 """
-import re
 mapp = {')':'(', ']':'[', '}':'{'}
 
 if __name__ == "__main__":
     T = int(input())
     stack = []
+    stack_max = []
     index = 0
     for _ in range(T):
-        str = re.split('(\W)', input())
-        str = list(filter(None, str))
+        str = list(input())
         stack = []
         match = True
         for value in str:
-            if value not in ['}', ']', ')']:
+            if value in ['(', '[', '{']:
                 stack.append(value)
-            else:
-                if len(stack) == 0:
+
+                all
+            elif value in [')', ']', '}']:
+                if len(stack) == 0 or stack.pop() != mapp[value]:
                     match = False
                     break
-                else:
-                    temp = stack.pop()
-                    while len(temp) > 1:
-                        if len(stack) == 0:
-                            match = False
-                            break
-                        else:
-                            temp = stack.pop()
-                    if temp != mapp[value]:
-                        match == False
-                        break
         if len(stack) != 0:
             match = False
         print({True:'YES', False:'NO'}[match])
