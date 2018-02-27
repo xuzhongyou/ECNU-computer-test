@@ -24,11 +24,17 @@
 # output
 # It isn't xiao qiang
 # It's xiao qiang
+def num(s):
+    try:
+        return str(int(s))
+    except ValueError:
+        return s.rstrip('0').rstrip('.')
+
 if __name__=='__main__':
     while True:
         try:
-            inputs = input().split(' ')
-            if inputs[0] == inputs[1]:
+            a, b = map(num, input().split(' '))
+            if a == b:
                 print("It's xiao qiang")
             else:
                 print("It isn't xiao qiang")
