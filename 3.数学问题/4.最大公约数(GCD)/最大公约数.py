@@ -1,28 +1,35 @@
 """
-@Time:2018/1/17 17:43
-@Author:xuzhongyou
+@Time:2018/2/8 21:28
+@Author:qingliu
+@Source:ECNU Online Judge
+@Problem:1055
+@Website:http://acm.ecnu.edu.cn/problem/1055/
 """
-#求最大公约数又公式推导得出的结论是：
-#a,b的最大公约数同时也是b,a mod  b的最大公约数
-
-#输入两个正整数，求其最大公约数
-#输入： 49 14
-#输出：7
-
+"""
+求两个数的最大公约数
+Examples
+    input
+        16 24
+    output
+        8
+"""
 def gcd(a,b):
-    if a == 0 and b == 0 :
-        result = 0
-        return result
-    elif a==0:
-        result = b
-        return result
-    elif b == 0:
-        result = a
-        return result
-    else:
-        if a>b:
-            return gcd(b,a%b)
+    while True:
+        if a == 0:
+            print(b)
+            break
+        elif b == 0:
+            print(a)
+            break
         else:
-            return gcd(a,b%a)
-a = gcd(6,15)
-print(a)
+            if a>b:
+                a = a%b
+            else:
+                b = b%a
+
+while True:
+    try:
+        a, b = map(int, input().split(' '))
+        gcd(a, b)
+    except EOFError:
+        pass
