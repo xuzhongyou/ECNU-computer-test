@@ -32,7 +32,7 @@ zero = 0
 while True:
     temp = []
     min_num = PriorityQueue.get()
-    for i in range(n-1):
+    for i in range(n-zero-1):
         remain = PriorityQueue.get() % min_num
         if remain == 0:
             zero += 1
